@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8c9d5">
+<title>A Little Birthday Surprise 💗</title>
+<style>
+:root{--pink:#f4a9bd;--deep:#7e3455;--cream:#fff8f7;--ink:#4c2639}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;color:var(--ink)}
+body{background:radial-gradient(circle at 20% 10%,#fff 0,transparent 35%),linear-gradient(135deg,#ffeaf0,#f7c7d7 55%,#fbe9e0);overflow-x:hidden}
+button,input{font:inherit}.app{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:18px}
+.deck{width:min(920px,100%);min-height:min(690px,calc(100svh - 36px));position:relative;border:1px solid #ffffffb8;border-radius:28px;background:#fff9f2d9;box-shadow:0 25px 80px #8b3c5a2b;overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;gap:10px;font-size:13px;letter-spacing:.04em;color:#7f3c58}
+.brand{font-weight:800}.count{white-space:nowrap}
+.progress{height:4px;background:#f5d5df}.bar{height:100%;width:0;background:#bd557d;transition:width .4s}
+.slides{position:relative;min-height:560px}.slide{position:absolute;inset:0;padding:clamp(25px,6vw,65px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0;transform:translateX(30px) scale(.985);pointer-events:none;transition:opacity .5s,transform .5s;overflow:auto}
+.slide.active{opacity:1;transform:none;pointer-events:auto;position:relative;min-height:560px}
+.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:#a54d70;font-weight:800}
+h1,h2{font-family:Georgia,"Noto Serif Bengali",serif;font-weight:500;line-height:1.15;margin:16px 0;color:#77334f}
+h1{font-size:clamp(38px,7vw,70px)}h2{font-size:clamp(30px,5vw,48px)}
+p{line-height:1.8;font-size:clamp(15px,2vw,18px);max-width:620px;margin:10px auto}
+.heart{font-size:48px;filter:drop-shadow(0 6px 12px #d77b9c55);animation:beat 1.5s infinite}
+@keyframes beat{50%{transform:scale(1.12)}}.pill{border:0;background:#9f4568;color:white;border-radius:99px;padding:13px 22px;cursor:pointer;box-shadow:0 8px 20px #9f456833;margin-top:18px}
+.pill.secondary{background:#fff;color:#91415f;border:1px solid #edc1cf;box-shadow:none}
+.nav{display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 20px 22px;flex-wrap:wrap}
+.navbtn{border:1px solid #e8b6c7;background:#fff9;color:#873a59;border-radius:99px;padding:10px 17px;cursor:pointer}
+.navbtn:disabled{opacity:.35;cursor:not-allowed}.dots{display:flex;gap:7px;align-items:center}.dot{width:7px;height:7px;border:0;border-radius:50%;background:#e7b7c7;padding:0;cursor:pointer}.dot.active{background:#994465;width:20px;border-radius:10px}
+.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;width:100%;max-width:690px;margin:22px auto}
+.photo{aspect-ratio:3/4;background:#fff;padding:8px 8px 24px;box-shadow:0 7px 20px #7c35501c;transform:rotate(-2deg);border-radius:3px;overflow:hidden}.photo:nth-child(2){transform:rotate(2deg);margin-top:12px}.photo:nth-child(3){transform:rotate(-1deg);margin-top:-5px}
+.photo img{width:100%;height:100%;object-fit:cover;background:#f9dce5;border-radius:2px}.photo-empty{height:100%;display:grid;place-items:center;color:#a85b79;font-size:13px}
+.uploads{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:12px}.uploads label{font-size:13px;border:1px dashed #c66d8d;padding:9px 12px;border-radius:12px;cursor:pointer;background:#fff8}.uploads input{display:none}
+.note{background:#fffaf7;border:1px solid #f0c8d4;border-radius:18px;padding:24px;max-width:640px;box-shadow:0 12px 35px #9c47631a;transform:rotate(-1deg)}
+.signature{font-family:Georgia,serif;font-style:italic;color:#a14e70;font-size:21px;margin-top:20px}
+.controls{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px}.tiny{font-size:12px;color:#9a6178}
+.sparkle{position:absolute;pointer-events:none;opacity:.5;font-size:22px;animation:float 8s linear infinite}@keyframes float{0%{transform:translateY(110vh) rotate(0)}100%{transform:translateY(-20vh) rotate(320deg)}}
+textarea{width:min(100%,560px);min-height:90px;border:1px solid #e8b5c6;border-radius:14px;padding:12px;background:#fffdfc;color:var(--ink);resize:vertical}
+.editrow{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px}.editrow input{max-width:180px;width:45%;border:1px solid #e8b5c6;border-radius:12px;padding:10px;background:#fffdfc}
+@media(max-width:560px){.app{padding:8px}.deck{border-radius:20px;min-height:calc(100svh - 16px)}.top{padding:14px 15px}.slides,.slide.active{min-height:560px}.slide{padding:28px 19px}.photo-grid{gap:7px}.photo{padding:5px 5px 18px}.nav{gap:8px;padding:12px}.navbtn{padding:9px 12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style></head>
+<body>
+<div class="app"><main class="deck" aria-label="Birthday surprise slideshow">
+<div class="top"><div class="brand">♡ A LITTLE SURPRISE</div><div class="count" id="count">01 / 07</div></div><div class="progress"><div class="bar" id="bar"></div></div>
+<div class="slides">
+<section class="slide active"><div class="heart">♡</div><div class="kicker">just for someone special</div><h1>A Little<br>Birthday Surprise</h1><br><h2>NIYAMA</h2><p>তোমার জন্য ছোট্ট একটা আয়োজন…<br><em>Made with love, just for you.</em></p><button class="pill" onclick="go(1)">Open your surprise ✨</button><div class="tiny" style="margin-top:18px">একটা একটা করে স্লাইড দেখো 💗</div></section>
+<section class="slide"><div class="kicker">today is all about you</div><h2>শুভ জন্মদিন! 🎂</h2><p>তোমার নতুন বছরটা ভরে উঠুক হাসি, শান্তি, ভালোবাসা আর অসংখ্য সুন্দর মুহূর্তে।</p><p><em>May your heart feel lighter, your smile shine brighter, and your dreams come closer.</em></p><div class="heart">🎀</div></section>
+<section class="slide"><div class="kicker">little moments, big feelings</div><h2>Our Favourite Frames</h2><p>তোমার সুন্দর ছবিগুলো যত্ন করে সাজিয়ে রাখলাম—শুধু তোমার জন্য।</p><div class="photo-grid"><div class="photo"><img src="images/photo1.jpg" alt="Birthday memory 1" loading="lazy"></div><div class="photo"><img src="images/photo2.jpg" alt="Birthday memory 2" loading="lazy"></div><div class="photo"><img src="images/photo3.jpg" alt="Birthday memory 3" loading="lazy"></div></div><div class="tiny">Three lovely frames, one special person ♡</div></section>
+<section class="slide"><div class="kicker">a wish from my heart</div><h2>তোমার জন্য কিছু চাওয়া…</h2><div class="note"><p>তোমার প্রতিটি সকাল শুরু হোক নতুন আশায়, প্রতিটি রাত শেষ হোক প্রশান্তিতে।</p><p>যে স্বপ্নগুলো তুমি চুপচাপ বুকের ভেতর আগলে রাখো, একদিন সেগুলো সত্যি হোক।</p><p><em>May life be kind to you, always. You deserve beautiful things.</em></p></div></section>
+<section class="slide"><div class="kicker">a little reminder</div><h2>You Are Special 💗</h2><p>তুমি হয়তো সবসময় বুঝতে পারো না, কিন্তু তোমার হাসি, তোমার কথা, তোমার উপস্থিতি—সবকিছুরই আলাদা একটা সৌন্দর্য আছে।</p><p><em>Never forget how wonderful you are. Keep being beautifully you.</em></p><div class="heart">♡</div></section>
+<section class="slide"><div class="kicker">one last thing</div><h2>একটা ছোট্ট চিঠি 💌</h2><div class="note"><p>আজকের দিনটা তোমার, তাই মন খুলে হাসো, নিজের পছন্দের কাজ করো আর অনেক ভালো থেকো। তোমার জীবনে যেন সবসময় ভালো মানুষ, সুন্দর সুযোগ আর আনন্দের মুহূর্ত আসে।</p><p><em>Happy Birthday. I hope this little surprise made you smile.</em></p><div class="signature" id="signoff">With lots of love, ♡</div></div></section>
+<section class="slide"><div class="heart">💗</div><div class="kicker">the end… or just a smile?</div><h2>Happy Birthday!</h2><p>তোমার আগামী দিনগুলো হোক আজকের চেয়েও সুন্দর।</p><p><em>Keep smiling. Keep shining. Stay wonderfully you.</em></p><div class="signature">Made especially for you ♡</div><button class="pill secondary" onclick="go(0)">Watch again ↺</button></section>
+</div>
+<div class="nav"><button class="navbtn" id="prev" onclick="go(index-1)">← Previous</button><div class="dots" id="dots"></div><button class="navbtn" id="next" onclick="go(index+1)">Next →</button></div>
+<div style="text-align:center;padding:0 12px 17px" class="tiny">A little page, a lot of heart ♡</div>
+</main></div>
+<script>
+let index=0;const slides=[...document.querySelectorAll('.slide')];const dots=document.getElementById('dots');
+slides.forEach((_,i)=>{const b=document.createElement('button');b.className='dot'+(i===0?' active':'');b.setAttribute('aria-label','Go to slide '+(i+1));b.onclick=()=>go(i);dots.appendChild(b)});
+function go(n){index=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,i)=>s.classList.toggle('active',i===index));[...dots.children].forEach((d,i)=>d.classList.toggle('active',i===index));document.getElementById('count').textContent=String(index+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');document.getElementById('bar').style.width=((index+1)/slides.length*100)+'%';document.getElementById('prev').disabled=index===0;document.getElementById('next').disabled=index===slides.length-1}
+function loadPhoto(input,n){const file=input.files&&input.files[0];if(!file)return;const img=document.getElementById('img'+n);img.src=URL.createObjectURL(file);img.hidden=false;document.getElementById('empty'+n).hidden=true}
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(index+1);if(e.key==='ArrowLeft')go(index-1)});
+for(let i=0;i<12;i++){const s=document.createElement('span');s.className='sparkle';s.textContent=['♡','✦','✿'][i%3];s.style.left=(Math.random()*100)+'%';s.style.animationDelay=(-Math.random()*8)+'s';s.style.animationDuration=(7+Math.random()*7)+'s';document.body.appendChild(s)}
+// Optional gentle music: starts only after the visitor taps the music button, as browsers block autoplay.
+let audioCtx=null,osc=null,gain=null,musicOn=false;
+const musicBtn=document.createElement('button');musicBtn.className='navbtn';musicBtn.textContent='♫ Play gentle music';musicBtn.style.position='fixed';musicBtn.style.right='12px';musicBtn.style.bottom='12px';musicBtn.style.zIndex='5';document.body.appendChild(musicBtn);
+musicBtn.onclick=async()=>{try{if(!audioCtx){audioCtx=new(window.AudioContext||window.webkitAudioContext)();gain=audioCtx.createGain();gain.gain.value=.035;gain.connect(audioCtx.destination);osc=audioCtx.createOscillator();osc.type='sine';osc.frequency.value=261.63;osc.connect(gain);osc.start()}if(audioCtx.state==='suspended')await audioCtx.resume();musicOn=!musicOn;gain.gain.setTargetAtTime(musicOn?.035:0,audioCtx.currentTime,.15);musicBtn.textContent=musicOn?'♫ Music on · Tap to pause':'♫ Play gentle music'}catch(e){musicBtn.textContent='Music unavailable in this browser'}};
+go(0);
+</script></body></html>
